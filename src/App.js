@@ -1,25 +1,67 @@
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
+
+import { Component } from 'react';
+import ToolTip from './Components/toolTip';
+class App extends Component {
+
+
+render(){
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <ToolTip position = {bottom}/>
     </div>
   );
 }
+}
 
 export default App;
+ 
+
+const top = {
+position: "absolute",
+border: "2px solid black",
+width: 300,
+top: -50,
+left: 20,
+borderRadius: 10,
+padding: 5,
+
+}
+
+
+const bottom = {
+  position: "absolute",
+  border: "2px solid black",
+  width: 250,
+  bottom: -50,
+  left: -60,
+  borderRadius: 10,
+  padding: 5,
+  
+  }
+
+  
+const right = {
+  position: "absolute",
+  border: "2px solid black",
+  width: 300,
+  top: 10,
+  left: 220,
+  borderRadius: 10,
+  padding: 5,
+  
+  }
+
+  
+const left = {
+  position: "absolute",
+  border: "2px solid black",
+  width: 250,
+  top: 10,
+  left: -270,
+  borderRadius: 10,
+  padding: 5,
+  
+  }
